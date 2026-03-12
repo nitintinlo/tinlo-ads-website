@@ -1,0 +1,167 @@
+/* Base Styles & Typography */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0a0a0c;
+    color: #f8fafc;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #060608;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6d28d9;
+}
+
+/* Outline Text Effect (Awwwards Style) */
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    transition: -webkit-text-stroke 0.3s ease;
+}
+
+.outline-text:hover {
+    -webkit-text-stroke: 1px rgba(109, 40, 217, 0.8);
+}
+
+/* Arrow Link Hover */
+.arrow-link:hover i {
+    transform: translateX(6px);
+}
+
+/* Base Animation Classes for Scroll Reveal */
+.fade-up,
+.fade-left,
+.fade-right {
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up {
+    transform: translateY(40px);
+}
+
+.fade-left {
+    transform: translateX(-40px);
+}
+
+.fade-right {
+    transform: translateX(40px);
+}
+
+.in-view {
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* Interactive Blob Animation */
+@keyframes blob {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+.animate-blob {
+    animation: blob 7s infinite alternate ease-in-out;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+/* Abstract Shape Animation Details */
+.abstract-shape {
+    animation: spin-slow 20s linear infinite;
+}
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.abstract-shape-delayed {
+    animation: spin-slow 25s linear infinite reverse;
+}
+
+/* Progress bar animation classes */
+.skill-progress {
+    transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Navigation Backdrop */
+.navbar-menu {
+    transition: opacity 0.3s ease;
+}
+
+/* Floating Orb Animation */
+@keyframes slow-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.animate-slow-float {
+    animation: slow-float 5s ease-in-out infinite;
+}
+
+/* Neon Drop Animation */
+@keyframes neonDrop {
+    0% {
+        top: 0;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
