@@ -1,2 +1,2 @@
-# tinlo-ads-website
+tinloads.com
 Website for tinlo ads
